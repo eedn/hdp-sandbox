@@ -39,7 +39,7 @@ compose_content = {
             ],
             'networks': [f'cda-{user_id}'],
             'ports': [
-                f'{user_id + 8080}:8080'
+                f'{base_port + 8080}:8080'
             ]
         }
     },
