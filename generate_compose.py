@@ -17,7 +17,7 @@ base_port = 10000 * user_id
 compose_content = {
     'version': '3.5',
     'services': {
-        'sandbox-hdp-{user_id}': {
+        f'sandbox-hdp-{user_id}': {
             'image': 'hortonworks/sandbox-hdp:2.6.5',
             'container_name': f'sandbox-hdp-{user_id}',
             'hostname': f'sandbox-hdp.hortonworks.com',
@@ -28,7 +28,7 @@ compose_content = {
             },
             'privileged': True
         },
-        'sandbox-proxy-{user_id}': {
+        f'sandbox-proxy-{user_id}': {
             'image': 'hortonworks/sandbox-proxy:1.0',
             'container_name': f'sandbox-proxy-{user_id}',
             'links': [f'sandbox-hdp-{user_id}'],
